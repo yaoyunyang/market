@@ -1,0 +1,74 @@
+<view class="outter">
+  <view class="userinfo">
+    <image src='{{details.avatarurl}}' class="useravatar"></image>
+    <view class="release_info">
+      <view class="usertime">
+        <text class="location">{{details.creatTime}}</text>
+        <text class="location">发布于南开大学\n{{details.campus}}</text>
+      </view>
+      <view class="username">
+        <text>{{details.nickname}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="money">
+    <text class="symbol">¥</text>
+    <text class="num">{{details.price}}</text>
+    <view class="sex_tag">{{details.sex_fit}}</view>
+  </view>
+  <view class="details">
+    <text selectable='true' >{{details.text_introduction}}</text>
+  </view>
+  <view wx:for="{{details.goods_photo}}" wx:key=" ">
+    <image src='{{item}}' mode="aspectFill" bindtap="preview" data-index="{{index}}" class="product_photo" />
+  </view>
+
+  <view class="space_bottom"></view>
+
+
+
+  <view class="_tabber">
+    <image src='../../images/attention_icon/Star.png' class="star"></image>
+    <text class="attention_num_style">{{details.attention_num}}</text>
+    <view wx:if="{{(details._openid == openid)&&(from_ == 'minepage')}}">
+      <view class="attention_button" bindtap="show_the_tabber"></view>
+      <text class="attention_button_text1" bindtap="show_the_tabber">编辑</text>
+    </view>
+
+    <view wx:else>
+      <block wx:if="{{!details.is_show}}">
+        <view class="attention_button" bindtap="collection"></view>
+        <text class="attention_button_text1" bindtap="collection">关注</text>
+      </block>
+      <block wx:else>
+        <view class="attention_button" style="background-color: gray" bindtap="collection"></view>
+        <text class="attention_button_text2" bindtap="collection">已关注</text>
+      </block>
+    </view>
+
+
+
+  </view>
+  <view class="modal-mask" bindtap="hide_tabber" catchtouchmove="preventTouchMove" wx:if="{{show_tabber}}"></view>
+  <view class="edit_delete " wx:if="{{show_tabber}}">
+    <view class="x " catchtap="close_the_tabber">
+      <image src='../../images/introduction_icons/x.png' style="width:30rpx;height:30rpx " />
+    </view>
+    <view class="select_item ">
+      <view class="left_edit " bindtap="to_release_page" data-goods="{{details}}">
+        <image src='../../images/introduction_icons/edit_icon.png' class="item_icon_ " />
+        <view class="edit ">
+          编辑
+        </view>
+      </view>
+      <view class="left_edit " bindtap="delete_release" data-_id="{{details._id}}" data-goods_name="{{details.goods_name}}" data-creatTime="{{details.creatTime}}" data-nickname="{{details.nickname}}" data-fileids="{{details.goods_photo}}">
+        <image src='../../images/introduction_icons/delete_icon.png' class="item_icon_ " />
+        <view class="edit ">
+          删除
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

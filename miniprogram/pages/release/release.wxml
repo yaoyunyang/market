@@ -1,0 +1,93 @@
+<view class="outter_color">
+  <view class="release_contents">
+    <view class="description">
+      <view class="textarea_style">
+        <textarea placeholder="请在这里写下您对商品的描述以及您的联系方式" value="{{temp_text}}"  bindblur="text_inrotduct" placeholder-style="font-size: 14px" maxlength="-1"/>
+      </view>
+    </view>
+    <view class="images-arrange">
+      <block wx:for="{{choose_product_images}}" wx:key="">
+        <image src='{{item}}' class="photo2" mode="aspectFill" bindtap='preview' data-index="{{index}}" />
+      </block>
+      <image wx:if="{{is_show_add_icon}}" src='../../images/release_icon/add_images.png' class="photo1" bindtap="choose_images" />
+    </view>
+    <view class="foot">
+      <view class="left_">
+        <image src='../../images/release_icon/location.png' />
+        <text style="margin-right:15rpx">南开大学</text>
+        <text style="color:{{changecolor1}}" bindtap='change_color1'>八里台</text>
+        <text>/</text>
+        <text style="color:{{changecolor2}}" bindtap='change_color2'>津南</text>
+      </view>
+      <view class="right_">
+       `<switch checked="{{switchChecked}}" bindchange="is_new" color="#7fe0cf" />
+        <text style="color: {{new_color}}" >全新宝贝</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="sex" bindtap="showDialogBtn2">
+    <text class="text_style">名称</text>
+    <view class="price_name_card">{{goods_name_on_icon}}</view>
+    <image class="com-sImg" src='../../images/release_icon/to.png' />
+  </view>
+
+  <view class="component_style">
+    <Select prop-array='{{selectArray}}' catch:get_selection="classificate"></Select>
+    <view class="price_name_card">{{classification_name_on_card}}</view>
+  </view>
+
+
+
+  <view class="sex" bindtap="showDialogBtn1">
+    <text class="text_style">价格</text>
+    <view class="price_name_card">{{num_on_icon}}</view>
+    <image class="com-sImg" src='../../images/release_icon/to.png' />
+  </view>
+  <view class="sex">
+    <text class="text_style">适用人群</text>
+    <view class="male_female">
+      <view class="boy" bindtap="all" style="background-color:{{all_color}}">全部</view>
+      <view class="boy" bindtap="woman" style="background-color:{{woman_color}}">女士</view>
+      <view class="boy" bindtap="man" style="background-color:{{man_color}}">男士</view>
+    </view>
+  </view>
+</view>
+
+<view class="down">
+  <view class="Button" bindtap='confirm_release'>
+    <text class="text-style">确认发布</text>
+  </view>
+</view>
+
+
+<!--弹窗价格-->
+<view class="modal-mask" bindtap="hideModal1" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>
+<view class="modal-dialog" wx:if="{{showModal1}}">
+  <view class="modal-content">
+    <view class="modal_input">
+      <view class="price_style">价格</view>
+      <input auto-focus type="number" maxlength='7' bindinput="inputChange1" class="price_input"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" catchtap="onCancel1" data-status="cancel">取消</view>
+    <view class="btn-confirm" catchtap="onConfirm1" data-status="confirm">确定</view>
+  </view>
+</view>
+
+<!--弹窗名称-->
+<view class="modal-mask" bindtap="hideModal2" catchtouchmove="preventTouchMove" wx:if="{{showModal2}}"></view>
+<view class="modal-dialog" wx:if="{{showModal2}}">
+
+  <view class="modal-content">
+    <view class="modal_input">
+      <view class="price_style">名称</view>
+      <input auto-focus maxlength='8' bindinput="inputChange2" class="name_input"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" catchtap="onCancel2" data-status="cancel">取消</view>
+    <view class="btn-confirm" catchtap="onConfirm2" data-status="confirm">确定</view>
+  </view>
+</view>

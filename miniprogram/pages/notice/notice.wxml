@@ -1,0 +1,52 @@
+<!--miniprogram/pages/message/message.wxml-->
+<tabbar tabbar="{{tabbar}}"></tabbar>
+
+<view class="topper">
+  <view class="shadow">
+  </view>
+  <view class="bar" >
+    <view class="format" bindtap="to_cancle_goods" >
+      <image src='../../images/notice_icons/cancle.png'></image>
+      <text class="text_">发布取消</text>
+    </view>
+    <view class="format" catchtap="to_recommandation">
+      <image src='../../images/notice_icons/recommand.png'></image>
+      <text class="text_">好物推荐</text>
+    </view>
+    <!-- bindtap="contact" -->
+    <view class="format">
+    <button class="btn1" open-type='contact'>
+      <image src='../../images/notice_icons/service.png'></image>
+    </button>
+    <text class="text_">联系客服</text>
+  </view>
+  </view>
+</view>
+
+<view class="below">
+  <!-- <view class="products" bindtap="temp_not_supported">
+    <image src='../../images/notice_icons/1.png'></image>
+    <view class="details">
+      <text class="title">商品变动</text>
+      <text class="contents">   </text>
+    </view>
+  </view> -->
+  <view class="products" bindtap="to_cancle_goods">
+    <view class="red_point" wx:if="{{red_point_cancle}}"></view>
+    <image src='../../images/notice_icons/2.png'></image>
+    <view class="details">
+      <text class="title">发布取消</text>
+      <text class="contents" wx:if="{{red_point_cancle}}">你所关注的商品已被取消发布</text>
+      <text class="contents" wx:else>无变动通知</text>
+    </view>
+  </view>
+  <!-- <view class="cancle" bindtap="to_cancle_goods">
+    <view class="red_point" wx:if="{{red_point_cancle}}"></view>
+    <image src='../../images/notice_icons/2.png'></image>
+    <view class="details">
+      <text class="title">发布取消</text>
+      <text class="contents" wx:if="{{red_point_cancle}}">你所关注的商品已被取消发布</text>
+      <text class="contents" wx:else>无变动通知</text>
+    </view>
+  </view> -->
+</view>

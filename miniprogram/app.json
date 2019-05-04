@@ -1,0 +1,47 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/notice/notice",
+    "pages/cancle_goods/cancle_goods",
+    "pages/mine/mine",
+    "pages/more_search/more_search",
+    "pages/introduction/introduction",
+    "pages/release/release",
+    "pages/search/search",
+    "Component/select/select",
+    "Component/select2/select2",
+    "Component/select3/select3",
+    "Component/BackGround/BackGround",
+    "Component2/classification_select/classification_select",
+    "pages/recommandation/recommandation"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "南开市场",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage"
+      },
+      {
+        "pagePath": "pages/search/search"
+      },
+      {
+        "pagePath": "pages/notice/notice"
+      },
+      {
+        "pagePath": "pages/mine/mine"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

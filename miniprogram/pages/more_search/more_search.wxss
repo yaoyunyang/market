@@ -1,0 +1,162 @@
+
+.father_input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.hidden_input{
+  width: 90%;
+  border-radius: 30rpx;
+  height: 50rpx;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+}
+.hidden_input image{
+  padding-top: 5rpx;
+  margin-left: 20rpx;
+  height:50rpx;
+  width: 50rpx;
+}
+.hidden_input input{
+  padding-top: 2rpx;
+  font-size: 30rpx;
+  width: 100%;
+}
+.select_container{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid ghostwhite;
+}
+
+
+
+
+
+.search_content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:10rpx 20rpx 10rpx 20rpx;
+}
+.content-item{
+  height: 500rpx;
+  width: 345rpx;
+  background: ghostwhite;
+  border-radius: 20rpx;
+  margin-bottom: 15rpx;
+  box-shadow: 2px 2px 5px #5f5d5de3;
+}
+.contet-item-image{
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  height: 74%;
+  width:100%;
+  background-color: #afafaf69;
+}
+
+.content-middle{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #309ef5;
+  margin-top: 6rpx;
+  position: relative;
+}
+.content-item-tab{
+  font-size: 25rpx;
+  height:42rpx;
+  margin-right: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-left: 40rpx;
+}
+.new_logo{
+  position: absolute;
+  height:30rpx;
+  width:45rpx;
+  bottom: 30rpx;
+  left:8rpx;
+  font-size: 15rpx;
+  background-color: #fa5601;
+  border-radius: 10rpx;
+  color:white;
+  font-weight:bolder;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.goods_name{
+  font-size: 20rpx;
+  color:black;
+  height:40rpx;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+
+.content-item-user{
+  display: flex;
+  flex-direction: row;
+  height: 50rpx;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  
+}
+.useravatar{
+  border-radius: 50%;
+  height: 50rpx;
+  width: 50rpx;
+}
+.username{
+  color: #ababab;
+  font-size: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  width: 144rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+}
+.attention{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 98rpx;
+}
+
+.icon_fixed{
+  position: relative;
+  height:40rpx;
+  width: 40rpx;
+  background-size: cover;
+}
+.icon_selected{
+
+  transform: scale(1.3,1.3)
+}
+.attention-icon{
+  
+  height:40rpx;
+  width: 40rpx;
+  
+}
+
+.attention-num{
+  margin-left: 10rpx;
+  color: #ababab;
+  font-size: 20rpx;
+}

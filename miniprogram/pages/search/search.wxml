@@ -1,0 +1,95 @@
+<!--miniprogram/pages/search/search.wxml-->
+<tabbar tabbar="{{tabbar}}"></tabbar>
+<view class="red_point" wx:if="{{red_point}}"></view>
+
+<view class="outter">
+  <view class="searchframe">
+    <view class="father_input">
+      <view class="input" data-name='' catchtap="to_more_search">
+        <view class="input-inner">
+          <image src='../../images/search_icon/search_icon.png' />
+          <text>搜索市场</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="first">
+    <view class="left-right">
+      <view class="books" data-name='图书' catchtap='to_more_search'>
+        <image src='../../images/classification_images/books.png' class="image-format" ></image>
+        <view class="books-text">
+          <text  class="search_text" >图\n书</text>
+        </view>
+      </view>
+      <view class="up-down">
+        <view class="electronic_clothes" data-name='电子产品' catchtap='to_more_search'>
+          <image src='../../images/classification_images/electronic.png' class="image-format"></image>
+          <view class="electronic_clothes-text">
+            <text class="search_text">电子产品</text>
+          </view>
+        </view>
+
+        <view class="electronic_clothes" data-name='服饰鞋包' catchtap='to_more_search'>
+          <image src='../../images/classification_images/clothes.png' class="image-format"></image>
+          <view class="electronic_clothes-text">
+            <text class="search_text">服饰鞋包</text>
+          </view>
+        </view>
+
+
+      </view>
+
+
+    </view>
+  </view>
+
+  <view class="second">
+    <view class="row">
+
+      <view class="gym" data-name='美妆运动' catchtap='to_more_search'>
+        <image src='../../images/classification_images/gym.png' class="image-format"></image>
+        <view class="gym-text">
+          <text class="search_text">美妆\n运动</text>
+        </view>
+      </view>
+
+      <view class="gym" data-name='水果生鲜' catchtap='to_more_search'>
+        <image src='../../images/classification_images/fruits.png' class="image-format"></image>
+        <view class="gym-text">
+          <text class="search_text">水果\n生鲜</text>
+        </view>
+      </view>
+
+      <view class="gym" data-name='其他' catchtap='to_more_search'>
+       <image src='../../images/classification_images/others.png' class="image-format"></image>
+        <view class="others">
+          <text class="search_text">其他</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="third">
+    <view class="gym" data-name='校外' catchtap='to_more_search'>
+      <image src='../../images/classification_images/outschool.png' class="image-format"></image>
+      <view class="others">
+        <text class="search_text">校外</text>
+      </view>
+    </view>
+    <view class="service" data-name='服务' catchtap='to_more_search'>
+      <image src='../../images/classification_images/service.png' class="image-format"></image>
+      <view class="service-text">
+        <text class="search_text">服务</text>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+</view>

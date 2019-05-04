@@ -1,0 +1,59 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+<tabbar tabbar="{{tabbar}}"></tabbar>
+<view class="red_point" wx:if="{{red_point}}"></view>
+
+<view class="outter">
+  <!--用户头像和昵称-->
+  <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{userAvatar}})"></button>
+    <text class="userinfo-nickname">{{userNickname}}</text>
+  </view>
+
+  <view class="middle">
+    <view class="release_collections" bindtap="showBorder1">
+      <text class="text_mine">发布</text>
+      <view class="showborder" wx:if="{{isshow1}}"></view>
+    </view>
+    <view class="space"></view>
+    <view class="release_collections" bindtap="showBorder2">
+      <text class="text_mine">收藏</text>
+      <view class="showborder" wx:if="{{isshow2}}"></view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view wx:for="{{products_mine}}" wx:key="">
+      <view class="content-item" bindtap="to_introduction" data-index="{{index}}" data-from_="minepage">
+
+
+        <image src='{{item.goods_photo[0]}}' class="contet-item-image" mode="aspectFill"  />
+
+
+        <view class="content-middle">
+          <view class="new_logo" wx:if="{{item.is_new}}">全新</view>
+          <text class="content-item-tab">#{{item.goods_sorts}}#</text>
+          <text class="goods_name">{{item.goods_name}}</text>
+        </view>
+
+        <view class="content-item-user">
+          <view class="user">
+            <image src='{{item.avatarurl}}' class="useravatar" />
+            <text class="username">{{item.nickname}}</text>
+          </view>
+
+          <view class="attention">
+            <view class="icon_fixed" hover-class='icon_selected' data-index="{{index}}" catchtap="attention_event">
+              <image wx:if="{{item.is_show}}" src='../../images/attention_icon/Selected_Star.png' class="attention-icon" />
+              <image wx:else src='../../images/attention_icon/Star.png' class="attention-icon" />
+
+            </view>
+            <view class="attention-num">{{item.attention_num}}</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  
+  <view class="show"></view>
+</view>

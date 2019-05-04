@@ -1,0 +1,138 @@
+.red_point{
+  height: 25rpx;
+  width: 25rpx;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  bottom: 105rpx;
+  left: 110rpx;
+  z-index: 999
+}
+.topper{
+  height:200rpx;
+  width: 100%;
+  background-color: #71d4fb;
+  position: relative;
+
+}
+.bar{
+  position: absolute;
+  height: 220rpx;
+  width: 95%;
+  left: 2.5%;
+  bottom:-55rpx;
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+}
+.shadow{
+  position: absolute;
+  height: 220rpx;
+  width: 95%;
+  left: 2.5%;
+  bottom:-80rpx;
+  border-radius: 30rpx;
+  background-color: #f9f9f9;
+}
+
+
+.format{
+  position: relative;
+  bottom: -60rpx;
+  width: 100rpx;
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 100%;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.btn1{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.format image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.format text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:18rpx;
+}
+
+
+.products{
+  margin-top: 80rpx;
+   display: flex;
+   flex-direction: row;
+   padding: 10rpx 20rpx;
+   z-index: -1
+}
+
+.products image{
+  border-radius: 20rpx;
+  width: 99rpx;
+  height: 99rpx;
+
+}
+
+
+.details{
+  display: flex;
+  flex-direction: column;
+  height: 99rpx;
+  margin-left: 20rpx;
+  justify-content: space-between;
+  padding-bottom: 20rpx;
+  padding-top: 6rpx;
+  border-bottom: 4rpx solid #f1eff0;
+}
+.title{
+  font-size: 13px;
+  height: 45rpx;
+  width:580rpx;
+  color: #3E3E3E;
+}
+.text_{
+  font-size:20rpx;
+  color: #3E3E3E;
+}
+.contents{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  height:45rpx;
+  width:580rpx;
+  color: #a59c9f;
+  
+}
+
+
+.cancle{
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   padding: 0rpx 20rpx;
+   margin-top: 20rpx;
+}
+.cancle image{
+  border-radius: 20rpx;
+  width: 110rpx;
+  height: 99rpx;
+}
+

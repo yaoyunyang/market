@@ -1,0 +1,4 @@
+{
+  "usingComponents": {"Select": "../../Component2/classification_select/classification_select"},
+  "navigationBarTitleText": "发布"
+}

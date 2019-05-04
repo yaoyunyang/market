@@ -1,0 +1,57 @@
+
+<view class="outter">
+
+  <view class="ad">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
+      <block wx:for="{{imgUrls}}" wx:key="id">
+        <swiper-item>
+          <image src="{{item.path}}" catchtap="preview"  data-id_="{{index}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="recommand">
+    <view class="header">
+      <text>首页推荐</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view wx:for="{{products_homepage}}" wx:key="">
+      <view class="content-item" bindtap="to_introduction" data-index="{{index}}" data-from_="homepage">
+
+
+        <image src='{{item.goods_photo[0]}}' class="contet-item-image" mode="aspectFill"  data-index="{{index}}" />
+
+
+        <view class="content-middle">
+          <view class="new_logo" wx:if="{{item.is_new}}">全新</view>
+          <text class="content-item-tab">#{{item.goods_sorts}}#</text>
+          <text class="goods_name">{{item.goods_name}}</text>
+        </view>
+
+        <view class="content-item-user">
+          <view class="user">
+            <image src='{{item.avatarurl}}' class="useravatar" />
+            <text class="username">{{item.nickname}}</text>
+          </view>
+          <view class="attention">
+            <view class="icon_fixed" hover-class='icon_selected' data-index="{{index}}" catchtap="attention_event">
+              <image wx:if="{{item.is_show}}" src='../../images/attention_icon/Selected_Star.png' class="attention-icon" />
+              <image  wx:else  src='../../images/attention_icon/Star.png' class="attention-icon" />
+
+            </view>
+            <view class="attention-num">{{item.attention_num}}</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <view class="show"></view>
+
+</view>
+
+<tabbar tabbar="{{tabbar}}"></tabbar>
+<view class="red_point" wx:if="{{red_point}}"></view>

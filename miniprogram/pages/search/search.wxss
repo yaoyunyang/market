@@ -1,0 +1,140 @@
+/* miniprogram/pages/search/search.wxss */
+
+.red_point{
+  height: 25rpx;
+  width: 25rpx;
+  border-radius: 50%;
+  background-color: red;
+  position: fixed;
+  bottom: 65rpx;
+  left: 70%;
+  z-index: 999
+}
+.father_input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.input{
+  padding-top: 6rpx;
+  width: 646rpx;
+  border-radius: 30rpx;
+  height: 50rpx;
+  background-color: #f0f0f0;
+}
+/*将图片文字包含在一起，使两者一起在该容器里居中，因为没有设置宽度，默认父亲容器宽度80%*/
+.input-inner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.input-inner image{
+  
+  height:50rpx;
+  width: 50rpx;
+}
+.input-inner text{
+  font-size: 30rpx;
+  color: #bdb6b6
+}
+
+
+
+.first{
+  padding: 35rpx 52rpx 0 52rpx
+}
+.left-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.up-down{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.books{
+  border-radius: 30rpx;
+  height:400rpx;
+  width:300rpx;
+  position: relative;
+}
+.books-text{
+  position: absolute;
+  bottom:35%;
+  left: 45%;
+  color: white;
+}
+.electronic_clothes{
+  border-radius: 30rpx;
+  height:190rpx;
+  width:300rpx;
+  position: relative;
+}
+.electronic_clothes-text{
+  position: absolute;
+  bottom: 35%;
+  left: 28%;
+  color: white;
+}
+
+
+.second{
+  padding: 35rpx 52rpx 0 52rpx
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.gym{
+  width: 195rpx;
+  height: 195rpx;
+  background-color: #d8d8d8;
+  border-radius: 30rpx;
+  position: relative;
+}
+.gym-text{
+  position: absolute;
+  bottom: 25%;
+  left: 32%;
+  color: white 
+}
+.others{
+  position: absolute;
+  bottom: 35%;
+  left: 34%;
+  color: white 
+}
+
+.third{
+  padding: 35rpx 52rpx 0 52rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.service{
+  height: 195rpx;
+  width: 412rpx;
+  border-radius: 30rpx;
+  position: relative;
+}
+.service-text{
+  position: absolute;
+  bottom: 38%;
+  left: 45%;
+  color: white;
+}
+
+
+.image-format{
+  border-radius: 30rpx;
+  width:100%;
+  height:100%;
+  box-shadow: -2px 2px 5px #5f5d5de3;
+}
+
+.search_text{
+font-weight:bold;
+font-size: 35rpx;
+}

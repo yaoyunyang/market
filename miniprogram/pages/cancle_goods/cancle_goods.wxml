@@ -1,0 +1,11 @@
+<!--miniprogram/pages/cancle_goods/cancle_goods.wxml-->
+<view class="container goods-list">
+<block wx:if="{{has_cancled}}">
+  <block wx:for="{{has_cancled}}" wx:for-item="goods" wx:key="">
+    <text class="goods-item">{{index + 1}}.  {{goods.nickname}} 的 {{goods.goods_name}} 已取消发布</text>
+  </block>
+ </block>
+ <block wx:else>
+   <text class="goods-item">您所关注的物品暂无信息变更</text>
+ </block>
+</view>

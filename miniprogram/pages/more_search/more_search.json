@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "select_search": "../../Component/select/select",
+    "select2_search": "../../Component/select2/select2",
+    "select3_search": "../../Component/select3/select3"
+  },
+  "navigationBarTitleText": "搜索",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 0
+}
